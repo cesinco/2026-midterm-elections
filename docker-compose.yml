@@ -1,0 +1,21 @@
+services:
+  streamlit-dashboard:
+    build: .
+    container_name: election_streamlit_app
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    environment:
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+    command: streamlit run _3_app.py
+
+  jupyter-notebook:
+    build: .
+    container_name: election_jupyter_server
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --ServerApp.token=''

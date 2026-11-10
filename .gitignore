@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Large raw datasets & shapefile extraction cache
+# (Excludes raw zip archives or unzipped shapefiles, but keeps your compiled data folder)
+*.zip
+*.shp
+*.shx
+*.dbf
+*.prj
+
+# Environment variables & secrets
+.env
+
+# Docker log files
+*.log
+
+# Backup files
+*.bak
